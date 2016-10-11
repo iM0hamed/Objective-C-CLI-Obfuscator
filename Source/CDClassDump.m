@@ -416,12 +416,7 @@ static NSDictionary<NSValue *, NSArray<NSValue *> *> *supportedArches = nil;
     return 0;
 }
 
-- (int)alterPrefixPCHFilesIn:(NSString *)prefixPCHDirectory
-          injectingImportFor:(NSString *)symbolsHeaderFileName
-{
-    NSString *textToInsert
-            = [NSString stringWithFormat:@"#include \"%@\"\n", symbolsHeaderFileName];
-
+- (int)alterPrefixPCHFilesIn:(NSString *)prefixPCHDirectory injectingImportFor:(NSString *)symbolsHeaderFileName{
     NSFileManager *fileManager = [NSFileManager new];
     NSDirectoryEnumerator *enumerator = [fileManager enumeratorAtPath:prefixPCHDirectory];
 
@@ -448,8 +443,18 @@ static NSDictionary<NSValue *, NSArray<NSValue *> *> *supportedArches = nil;
                 NSLog(@"Error: could not read file %@", filename);
                 return 1;
             }
-
-            [fileContents insertString:textToInsert atIndex:0];
+            
+            NSMutableString *stringToInsert = [NSMutableString new];
+            [stringToInsert setString:@"#ifndef PrefixHeader_symbols_pch\n"];
+            [stringToInsert appendString:@"#define PrefixHeader_symbols_pch\n"];
+            [stringToInsert appendString:@"#ifdef __OBJC__\n"];
+            [stringToInsert appendString:@"#import <UIKit/UIKit.h>\n"];
+            [stringToInsert appendString:@"#import <Foundation/Foundation.h>\n"];
+            [stringToInsert appendString:@"#import \"symbols.h\"\n"];
+            [stringToInsert appendString:@"#endif\n"];
+            [stringToInsert appendString:@"#endif\n"];
+            
+            [fileContents insertString:stringToInsert atIndex:0];
 
             BOOL result = [fileContents writeToFile:filename
                                          atomically:YES
