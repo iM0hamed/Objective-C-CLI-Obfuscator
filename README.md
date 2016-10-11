@@ -1,5 +1,5 @@
-Objective-C CLI Obfuscator for Methods,IVars and Classes<br>
-===========================================<br>
+Objective-C CLI Obfuscator for Methods,IVars and Classes
+===========================================
 This is fork of fork of original [class-dump](https://github.com/nygard/class-dump) I have improved obfuscation which makes all obfuscated items the same lenght with random characters so analyzing binary is much harder than in previous fork. It also contains few fixes.<br><br>
 
 <b>How it works ?</b><br>
