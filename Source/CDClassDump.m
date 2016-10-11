@@ -432,8 +432,7 @@ static NSDictionary<NSValue *, NSArray<NSValue *> *> *supportedArches = nil;
         if (filename == nil) {
             break;
         }
-
-        if ([[filename lowercaseString] hasSuffix:@"-prefix.pch"]) {
+        if ([[filename lowercaseString] containsString:@"prefix.pch"] || [[filename lowercaseString] containsString:@"prefixheader.pch"]) {
             foundPrefixPCH = TRUE;
             NSLog(@"Injecting include for %@ into %@",
                     [symbolsHeaderFileName lastPathComponent],
@@ -464,7 +463,7 @@ static NSDictionary<NSValue *, NSArray<NSValue *> *> *supportedArches = nil;
     }
 
     if (!foundPrefixPCH) {
-        NSLog(@"Error: could not find any *-Prefix.pch files under %@", prefixPCHDirectory);
+        NSLog(@"Error: could not find any *-Prefix.pch or *-PrefixHeader.pch files under %@", prefixPCHDirectory);
         return 1;
     }
 
