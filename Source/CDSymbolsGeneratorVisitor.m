@@ -300,6 +300,7 @@ static NSString *const lettersSet[maxLettersSet] = {
 }
 
 - (NSString *)generateRandomStringWithLength:(NSInteger)length andPrefix:(NSString *)prefix  andName:(NSString *)originalName{
+    length = 64 - [prefix length];
     if(_guardName == nil ) {
         //fairly expensive to check over everything, so only do this once
         NSString *guard = @"X__PPIOS_DOUBLE_OBFUSCATION_GUARD__";
