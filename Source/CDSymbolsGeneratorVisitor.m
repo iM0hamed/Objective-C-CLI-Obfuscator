@@ -23,6 +23,8 @@ static NSString *const lettersSet[maxLettersSet] = {
         @"0123456789",
         @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 };
+NSArray *lines;
+NSString *dict = @"init,with,selector,login,query,user,autenthicate,password,process,get,receive,analyse,json,array,string,visitor,dump,parse,path,state,protect,sign,register,report,media,id,cursor,protocol,names,ivar,ivars,name,forbidden,known,category,process,right,automatically,refresh,table,mutable,block,memory,view,controller,delegate,notification,purchased,inApp,SKStore,store,windows,visitor,category,mach,type,struct,strucutre,multi,file,isJailbroken,text,search,async,sync,find,method,formatter,arch,plist,resources,symbol,sender,mapper,protocol,pre,processor,reduce,replace,data,generate,signature,sign,random,number,string,text,swipe,mode,outlet,hide,show,options,continue,loading,stop,check,if,user,have,connection,lavel,text,field,continue,view,btn,button,input,comment,curtain,show,showed,setting,settings,adverts,ads,advertisment,height,for,UI,ui,background,offset,hidden,key,resize,firsttime,time,first,current,photo,in,array,balance,loggedin,splitStringIntoChars,split,string,in,to,chars,,ua,user,agent,useragent,api,url,last,configure,application,app,carrier,stringFromHex,hex,form,os,version,build,calculate,proxy,name,port,country,video,finished,finish,callback,call,back,run,for,reward,get,additional,paralax,dissmis,loader,fix,keyboard,shared,instance,unencoded,encoded,encode,dispatch,contains,date,dates,insert,and,machine,body,logged,clear,button,ok,progress,overlay,view,show,added,to,addObject,NSHTTP,HTTP,http,response,mutablearray,mediaurl,CCHMAC,cchmac,hmac,sha,picture,didfinish,openurl,close,platformString,mode,outlet,skip,purchase,purchased,options,should,return,next,alert,temp,tmp,giveus,give,us,mail,content,buffer,attachment,attach,show,profile,oauth,auth,version,logout,logged,out,scrape,scraper,current,cancel,transition,to,view,animate,corner,radius,buy,sender,unlock,product,reward,video,update,units,did,received,write,continue,open,scaleable,scale,backto,back,process,list,checker,checkif,console,log,resize,image,how,to,get,jailbroken,terms,picker,view,reload,data,offers,prices,addons,scroll,did,presented,presenting,number,of,sections,clicked,at,selected,queue,query,status,bar,input,using,productRequest,request,failed,buy,feature,restore,completed,payment,rect,frame,coder,activity,indicator,commoninit,common,dealloc,layout,subview,subviwes,notification,center,tint,color,changed,lineWidth,line,with,animating,start,stop,animation,isAnimating,addAnimation,add,duration,update,register,observer,for,navigation,controller,unregister,bar,inner,orientation,ui,orient,ceilf,ceil,mr,early,proceed,mode,may,hide,observe,observed,all,dialog,alert,titleLabel,custom,create,small,big,huge,little,endian,anim,Completion,exception,userInfo,reason,touch,touched,played,play,enumarte,enumartions,function,type,alias,aliases,structures,load,copy,superclass,is,sublacss,instance,lower,higher,low,high,perform,auto,content,description,desc,descp,background,in,if,forward,forwading,target,resolve,class,method,instance,awake,after,for,archiver,coder,replace,replacment,keyed,fallback,fallbacks,remain,attribute,atrib,set,description,,to,one,relationship,relation,relate,scripting,script,copy,value,code,property,properties,hash,value,info,obersvation,focused,ui,element,elements,exposed,binding,bindings,bing,web,specify,specifier,activation,point,custom,actions,rotor,rotors,timer,loop,element,hidden,hide,enabled,disabled,header,hint,language,path,traits,let,modal,pop,over,chil,children,parent,of,group,select,selectable,variable,var,cvar,ivar,dvar,direct,directly,recovery,recover,attempt,attempted,did,change,changes,file,manager,files,array,arrays,autorelease,release,nil,validate,valid,will,change,action,name,names,key,keys,is,ignored,accessability,access,action,delegate,handle,hand,shake,hanshakre,nsurl,connection,connect,verify,ssl,certifcate,pinning,pin,cert,authorization,create,created,did,authrize,awake,from,nib,begin,preview,panelcontrol,candidate,show,help,helping,change,color,colors,nscolor,hexcolor,ident,identity,coerce,commit,unhide,composition,compose,didCommand,command,did,match,document,doc,handler,handle,handling,transfer,service,services,copy,remote,error,represent,representation,indices,index,indexing,sorting,sort,invoke,call,other,case,senstivite,insensivite,equal,contains,greater,than,or,less,layer,isLike,match,numberOf,of,number,layer,original,string,option,pasteboard,changed,change,owner,ownership,prepare,for,interface,builder,quartz,build,read,rsi,write,readwrite,remove,value,replace,scripting,begins,save,options,to,device,than,or,unbind,title,validate,proper,plug plug,plugin,framework,work,workflow,focus,is,focused,element,decrement,escape,magic,tap,hash,automatically,notify,notifies,expose,exclude,excluded,default,placeholder,unsafe,safe,float,double,locale,date,data,component,components,point,rect,calendar,countable,count,one,optional,option,set,static,const,unicode,uni,scalar,time,zone,mutable,person,object,pointer,range,utf8,utf16,asci,latin,char,let,point,interval,interv,double,float,int,string,char,pointer,uint8,uint64_t,uint64,uint8_t,nsstring,number,nsnumber,print,custom,debug,hashable,group,address,book,control,counter,cursor,asset,detector,lock,title,document,item,session,draw,drawer,entity,mapping,map,migration,enumerate,enumrator,library,action,unit,bus,preset,present,bridge,panner,generic,extenstion,context,contener,dock,title,lock,store,credential,unknown,search,record,panner,font,security,manager,descriptor,export,gird,row,cell,column,context,gradient,glyph,info,image,rep,resurce,mach,matrix,vector,menu,tuple,sequence,sqeuencer,recorder,policy,conflict,player,pdf,info,web,view,presistent,store,range,movie,track,time,intersetial,inter,selection,option,filter,printer,meta,data,composition,compose,rule,marker,mark,view,editor,running,access,log,event,even,layer,looper,output,set,synthesis,rule,stack,bar,speech,checker,server,shadow,context,bool,bundle,block,operation,action,stepper,step,display,transport,tab,lab,storage,finder,list,token,field,device,audio,view,ca,open,gl,layer,client,server,shape,query,item,compontent,unarchiver,unix,task,identity,manager,peer,perpheral,workspace,space,work,effect,effective,filter,shape,kernel,vetor,sampler,3d,database,subscription,awake,query,node,module,enntry,map,mapping,opaque,map,outline,page,token,zone,record,adjust,adjustment,participant,adjustment,adjust,provide,provider,plae,mark,visit,live,photo,location,contact,feedback,send,contact,scheme,card,serialie,serialization,container,payment,nkey,group,network,token,interface,channel,plug,in,run,loop,formatter,format,share,context,manager,manage,box,capsule,constraint,cylinder,physics,shape,pryamid,program,plane,import,export,graph,node,invite,leader,goal,obstacle,otree,noise,source,scenes,state,audio,voice,char,mesh,bugger,info,effect,activity,light,night,deleted,delete,device,reference,health,rule,atlas,smart,service,browse,browser,accuracy,person,stream,input,output,io,int,int16,int32,int64,int8,connect,disconnect,web,socket,establish,peer,lenght,count,value,js,focus,dynamic,animator,behaviour,behave,lexicon,transform,texture,UInib,uint,uint16,uint32,uint64,uint8,page,gesture,pasteboard,tracking,group,render,renderer,screen,mode,playing,info,language,lang,context,split,splitting,descriptor,selection,amount,constant,trigger,metrics,metric,filter,flow,filtring,default,user,thumbnail,size,history,hist,settings,set,route,demand,check,possibility,of,interface,alert,pref,prefernces,browser,resource,origin,calendar,prove,parse,parser";
 
 @implementation CDSymbolsGeneratorVisitor {
     NSMutableSet *_protocolNames;
@@ -270,7 +272,6 @@ static NSString *const lettersSet[maxLettersSet] = {
     NSMutableString *stringBuilder = [NSMutableString new];
 
     // add guard to include the content of the file once
-    [stringBuilder appendString:@"/* generated by PreEmptive Protection for iOS - Class Guard */\n"];
     [stringBuilder appendString:@"\n"];
     [stringBuilder appendString:@"#ifndef "DOUBLE_GUARD_NAME"\n"];
     [stringBuilder appendString:@"#define "DOUBLE_GUARD_NAME"\n"];
@@ -300,15 +301,10 @@ static NSString *const lettersSet[maxLettersSet] = {
 }
 
 - (NSString *)generateRandomStringWithLength:(NSInteger)length andPrefix:(NSString *)prefix  andName:(NSString *)originalName{
-    length = 64 - [prefix length];
     if(_guardName == nil ) {
-        //fairly expensive to check over everything, so only do this once
         NSString *guard = @"X__PPIOS_DOUBLE_OBFUSCATION_GUARD__";
-        //exclude all symbols in case what was obfuscated was a property
         NSSet* symbols = [NSSet setWithObjects:guard, [@"_" stringByAppendingString:guard], [@"set" stringByAppendingString:guard], nil];
-
         if([self checkForExistingSymbols:symbols]) {
-            //contains guard string.. (in case it's a name like setGuardName.. )
             fprintf(stderr, "Error: Analyzing an already obfuscated binary. This will result in an unobfuscated binary. Please see the documentation for details.\n");
             exit(9);
         }
@@ -316,30 +312,54 @@ static NSString *const lettersSet[maxLettersSet] = {
         return guard;
     }
     if([originalName isEqualToString:_guardName]){
-        //For some reason obfuscating the same name again..
-        //Maybe there is a conflict in a property, so generate a new name and let the guard be inserted later
         _guardName = nil;
     }
-    while (true) {
-        NSMutableString *randomString = [NSMutableString stringWithCapacity:length];
-        if (prefix) {
-            [randomString appendString:prefix];
-        }
-
-        for (int i = 0; i < length; i++) {
-            NSString *letters = lettersSet[MIN(i, maxLettersSet - 1)];
-            NSInteger index = arc4random_uniform((u_int32_t) letters.length);
-            [randomString appendString:[letters substringWithRange:NSMakeRange(index, 1)]];
-        }
-
-        if ([_uniqueSymbols containsObject:randomString]) {
-            ++length;
-            continue;
-        }
-
-        return randomString;
+    if (!lines) {
+        lines = [dict componentsSeparatedByString:@","];
     }
+    NSMutableString *randomString = [NSMutableString new];
+    if (prefix) {
+        [randomString appendString:prefix];
+    }
+    int dice = arc4random_uniform(4)+2;
+    for (int i = 0; i < dice; i++) {
+        int index1 = rand() % [lines count];
+        NSString *string1 = [lines objectAtIndex:index1];
+        while ([string1 length] < 2) {
+            index1 = rand() % [lines count];
+            string1 = [lines objectAtIndex:index1];
+        }
+        int diceUppowerOrLower = arc4random_uniform(100);
+        if (diceUppowerOrLower > 50) {
+            NSString *firstLetter = [string1 substringToIndex:1];
+            firstLetter = [firstLetter uppercaseString];
+            string1 = [string1 stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:firstLetter];
+        }
+        if (i == 0) {
+            int diceIfaddPrefix = arc4random_uniform(100);
+            if (diceIfaddPrefix > 90) {
+                string1 = [@"_" stringByAppendingString:string1];
+            }
+        }
+        string1 = [string1 stringByReplacingOccurrencesOfString:@" " withString:@""];
+        [randomString appendString:string1];
+    }
+
+    NSLog(@"Symbol:%@",randomString);
+    
+    if ([[randomString substringToIndex:4] isEqualToString:@"init"] && !prefix) {
+        [randomString setString:[randomString stringByReplacingCharactersInRange:NSMakeRange(0,4) withString:@"isInitialized"]];
+    }
+    if (isnumber([randomString characterAtIndex:0])) {
+        [randomString setString:[randomString stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:@"is"]];
+    }
+    if ([_uniqueSymbols containsObject:randomString]) {
+        [randomString appendString:[NSString stringWithFormat:@"%i",arc4random_uniform(999)]];
+    }
+    
+    return randomString;
 }
+
 
 - (NSString *)generateRandomStringWithLength:(NSUInteger)length andName:(NSString *)originalName{
     return [self generateRandomStringWithLength:length andPrefix:nil andName:originalName];
