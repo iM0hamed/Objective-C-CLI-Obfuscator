@@ -1,5 +1,8 @@
 Objective-C CLI Obfuscator for Methods,IVars and Classes
 ===========================================
+<b>READ ME</b><br>
+Some users reported that binary obfuscated with this software caused Apple Review rejection, apple review team dump your all classes names, ivars, selectors and check if you don't hide something, it's stupid since it can be hidden anyway. Usually you will be able to submit app obfuscated with it, but if you encounter on stubborn Apple reviewer then your app will be rejected and it will be hard to resubmit even without obfuscation since they will assume that your app hide something like using their private api to do nasty things, they don't care it's security measure to lift up bar for attacker. Check branch [apple-review-safe](https://github.com/karek314/Objective-C-CLI-Obfuscator/tree/apple-review-safe) it's safer to use, it does not bring as much attention as this version when each symbol is 64 character length random meaningless string.
+
 This is fork of fork of original [class-dump](https://github.com/nygard/class-dump) I have improved obfuscation which makes all obfuscated items the same lenght with random characters so analyzing binary is much harder than in previous fork. It also contains few fixes.<br><br>
 
 <b>How it works ?</b><br>
