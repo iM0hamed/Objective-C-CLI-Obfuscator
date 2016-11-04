@@ -1,5 +1,8 @@
 Objective-C CLI Obfuscator for Methods,IVars and Classes
 ===========================================
+<b>READ ME</b><br>
+This branch brings less attention to binary symbols while reviewed by Apple. It's building new randomised symbols on the top of existing programming terms.
+
 This is fork of fork of original [class-dump](https://github.com/nygard/class-dump) I have improved obfuscation which makes all obfuscated items the same lenght with random characters so analyzing binary is much harder than in previous fork. It also contains few fixes.<br><br>
 
 <b>How it works ?</b><br>
