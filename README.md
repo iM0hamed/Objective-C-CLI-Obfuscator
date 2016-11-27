@@ -23,4 +23,4 @@ Optionaly, if you want to make a little mess in code. <br>You can optionally use
 <br>`Valid options:`
 <br>`code - generates obj-c code`
 <br>`list PREFIX - generates list of methods`
-<br>It can generate huge tree of methods which each one will return previous one, then the last one can do the job you want, this principle can be used to manipulate output in each function in tree automatically which may reverse engineering harder.
+<br>It can generate huge tree of methods which each one will return previous one, then the last one can do the job you want, this principle can be used to manipulate output in each function in tree, so reverse engineering will be harder, rewriting assembly code from one function is simpler and faster then reversing many small functions.
