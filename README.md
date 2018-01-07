@@ -3,7 +3,7 @@ Objective-C CLI Obfuscator for Methods,IVars and Classes
 This is fork of fork. I have improved obfuscation which makes all obfuscated items the same lenght with random characters so analyzing binary is much harder than in previous fork. It also contains few fixes.<br><br>
 
 <h2>Apple Review Problems</h2>
-This caused multiple developer accounts suspension. This shouldn't be used with applications targeted to apple, as obfuscation in Apple Appstore is only for choosen ones.
+This caused multiple developer accounts suspension. This shouldn't be used with applications targeted to apple, as obfuscation in Apple Appstore is only for chosen ones.
 
 ## How it works ?
 It works by generating a special set of `#define` statements (e.g. `#define generatePrivateKey qRAu8sjFRoba9UOokMqsOrWabeiCV00fk2GPxznUzvV3kAHKSkN5UfTFlAIvJrtR`) that automatically rename symbols during compilation.<br><br>
