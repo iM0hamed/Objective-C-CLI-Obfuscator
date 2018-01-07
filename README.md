@@ -1,11 +1,9 @@
 Objective-C CLI Obfuscator for Methods,IVars and Classes
 ===========================================
-This is fork of fork of original [class-dump](https://github.com/nygard/class-dump) I have improved obfuscation which makes all obfuscated items the same lenght with random characters so analyzing binary is much harder than in previous fork. It also contains few fixes.<br><br>
+This is fork of fork. I have improved obfuscation which makes all obfuscated items the same lenght with random characters so analyzing binary is much harder than in previous fork. It also contains few fixes.<br><br>
 
 <h2>Apple Review Problems</h2>
-Some users reported that binary obfuscated with this software caused Apple Review rejection, apple review team dump your all classes names, ivars, selectors and check if you don't hide something, it's stupid since it can be hidden anyway. Usually you will be able to submit app obfuscated with it, but if you encounter on stubborn Apple reviewer then your app will be rejected and it will be hard to resubmit even without obfuscation since they will assume that your app hide something like using their private api to do nasty things, they don't care it's security measure to lift up bar for attacker. Check branch [apple-review-safe](https://github.com/karek314/Objective-C-CLI-Obfuscator/tree/apple-review-safe) it's safer to use, it does not bring as much attention as this version when each symbol is 64 character length random meaningless string.
-
-<b>EDIT: I WOULD ADVISE TO DO NOT USE THIS PROJECT AT ALL FOR ANY APPLICATION TARGETED TO APPLE APPSTORE. Since i have heard that because of that code few apple developer programs has been terminated. It seems Apple is getting more and more strict on developers and applications. Now uploading llvm intermediate representation of code is opt-in, soon it may be mandatory, who knows when they will ask for full project source code.</b>
+This caused multiple developer account suspension. This shouldn't be used with applications targeted to apple, as obfuscation in Apple Appstore is only for choosen ones.
 
 ## How it works ?
 It works by generating a special set of `#define` statements (e.g. `#define generatePrivateKey qRAu8sjFRoba9UOokMqsOrWabeiCV00fk2GPxznUzvV3kAHKSkN5UfTFlAIvJrtR`) that automatically rename symbols during compilation.<br><br>
